@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Header } from "./components/Header";
-import { Hero } from "./components/Hero";
+//import { Hero } from "./components/Hero";
 import { Hero1 } from "./components/Hero1";
 import { ServiceCard } from "./components/ServiceCard";
 import { ProjectCard } from "./components/ProjectCard";
@@ -57,7 +57,7 @@ export const BibotectureLandingPage: React.FC = () => {
             Our Work in Action
           </h2>
           <p className="mt-6 text-6xl font-medium leading-[67px] max-md:max-w-full max-md:text-4xl max-md:leading-[54px]">
-            We've helped startups and enterprises shape meaningful digital
+            We&apos;ve helped startups and enterprises shape meaningful digital
             journeys.
           </p>
         </header>
@@ -112,7 +112,7 @@ export const BibotectureLandingPage: React.FC = () => {
               Launching Soon Our Chrome Extension Beta
             </h2>
             <p className="mt-6 text-base leading-7 max-md:max-w-full">
-              Get ready for something powerful. We're building an innovative
+              Get ready for something powerful. We&apos;re building an innovative
               Chrome extension that transforms how you interact with the web.{" "}
               <br />
               Stay tuned — early access opening soon.
@@ -141,7 +141,7 @@ export const BibotectureLandingPage: React.FC = () => {
               Mind Behind Bibotecture
             </h2>
             <p className="mt-6 text-lg leading-7 max-md:max-w-full">
-              Hi, I'm [Founder's Name] — a product-first technologist passionate
+              Hi, I&apos;m [Founder&apos;s Name] — a product-first technologist passionate
               about building accessible and enduring digital experiences. With a
               decade in the tech industry, I founded Bibotecture to help
               businesses merge form and function in the digital era.
@@ -166,11 +166,11 @@ export const BibotectureLandingPage: React.FC = () => {
         <div className="flex z-0 flex-col min-w-60 w-[618px] max-md:max-w-full">
           <div className="max-w-full text-white w-[618px]">
             <h2 className="text-6xl font-semibold leading-[62px] max-md:max-w-full max-md:text-4xl max-md:leading-[50px]">
-              Let's Build the Future Together
+              Let&apos;s Build the Future Together
             </h2>
             <p className="mt-6 text-lg leading-7 max-md:max-w-full">
               Have an idea, a product, or just want to chat about possibilities?
-              Fill out the form, and we'll get back to you within 24 hours.
+              Fill out the form, and we&apos;ll get back to you within 24 hours.
             </p>
           </div>
           <div className="flex gap-4 items-center self-start mt-12 max-md:mt-10">
