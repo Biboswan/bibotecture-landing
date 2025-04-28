@@ -1,103 +1,188 @@
-import Image from "next/image";
+"use client";
+import React from "react";
+import { Header } from "./components/Header";
+import { Hero } from "./components/Hero";
+import { Hero1 } from "./components/Hero1";
+import { ServiceCard } from "./components/ServiceCard";
+import { ProjectCard } from "./components/ProjectCard";
+import { ContactForm } from "./components/ContactForm";
+import { Footer } from "./components/Footer";
+import { Button } from "./components/Button";
+import { SocialLinks } from "./components/SocialLinks";
 
-export default function Home() {
+export const BibotectureLandingPage: React.FC = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="flex overflow-hidden flex-col items-center bg-gray-950 font-['Montserrat']">
+      <Header />
+      <Hero1 />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section className="py-24 w-full text-white max-w-[1320px] max-md:max-w-full">
+        <header className="pt-4 w-full">
+          <div className="z-10 max-w-full text-base leading-tight uppercase w-[538px]">
+            <div className="w-full border border-white border-solid min-h-px max-md:max-w-full" />
+            <h2 className="mt-1 max-md:max-w-full">What We Do</h2>
+          </div>
+          <p className="mt-0 text-6xl font-medium leading-[67px] max-md:mt-0 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]">
+            We are creatives who focus on creating quality work that offers{" "}
+            <strong>powerful solutions</strong>, combining great designs with
+            functionality.
+          </p>
+        </header>
+
+        <div className="mt-20 w-full max-md:mt-10 max-md:max-w-full">
+          <ServiceCard
+            number="001"
+            title="UI/UX Development Services"
+            description="We create seamless and user-focused interfaces that elevate the entire product experience crafted with scalability and beauty in mind."
+            imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/040c1206e0937efd341acdaefb5511937f3556e0?placeholderIfAbsent=true&apiKey=908848c17fde48fcb02ed14c4772c70f"
+          />
+          <ServiceCard
+            number="002"
+            title="Accessibility Audit"
+            description="Digital inclusion is not optional. We help you meet global accessibility standards (WCAG/ADA) to ensure your product is usable for everyone."
+            imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/7873e3c54d6d2d4def1ec30b6f52c21177a062e4?placeholderIfAbsent=true&apiKey=908848c17fde48fcb02ed14c4772c70f"
+          />
+          <ServiceCard
+            number="003"
+            title="Chrome Extension Development"
+            description="From ideation to deployment, we build high-performance Chrome extensions tailored to your business goals and user needs."
+            imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/1d9943fa82bf45c0dd3114a3f40fbe2dc3d925b0?placeholderIfAbsent=true&apiKey=908848c17fde48fcb02ed14c4772c70f"
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <section className="py-24 w-full max-w-[1321px] max-md:max-w-full">
+        <header className="max-w-full text-white w-[873px]">
+          <h2 className="text-base leading-tight uppercase max-md:max-w-full">
+            Our Work in Action
+          </h2>
+          <p className="mt-6 text-6xl font-medium leading-[67px] max-md:max-w-full max-md:text-4xl max-md:leading-[54px]">
+            We've helped startups and enterprises shape meaningful digital
+            journeys.
+          </p>
+        </header>
+
+        <div className="mt-20 w-full max-md:mt-10 max-md:max-w-full">
+          <div className="flex flex-wrap gap-10 justify-between items-center w-full max-md:max-w-full">
+            <div className="flex gap-10 justify-between items-center self-stretch my-auto text-base leading-relaxed text-white min-w-60 w-[316px]">
+              <p className="self-stretch my-auto">Selected Projects</p>
+              <p className="self-stretch my-auto">3 / 9</p>
+            </div>
+            <div className="flex gap-3 items-center self-stretch my-auto">
+              <button
+                className="flex gap-2.5 justify-center items-center self-stretch px-8 py-1 my-auto rounded-3xl bg-gray-950 rotate-[3.141592653589793rad] w-[88px] max-md:px-5"
+                aria-label="Previous"
+              >
+                <span className="flex self-stretch my-auto w-6 min-h-6">←</span>
+              </button>
+              <button
+                className="flex gap-2.5 justify-center items-center self-stretch px-8 py-1 my-auto rounded-3xl bg-gray-950 w-[88px] max-md:px-5"
+                aria-label="Next"
+              >
+                <span className="flex self-stretch my-auto w-6 min-h-6">→</span>
+              </button>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-5 items-start mt-3 w-full text-white max-md:max-w-full">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/26eb33b16d8a98ebc5d0f5c87124189f406a4b27?placeholderIfAbsent=true&apiKey=908848c17fde48fcb02ed14c4772c70f"
+              alt=""
+              className="object-contain shrink-0 rounded-xl aspect-[1.18] min-w-60 w-[315px]"
+            />
+            <ProjectCard
+              imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/bae27cd94d71d6aa54e333df4a1cc66b7e1ac742?placeholderIfAbsent=true&apiKey=908848c17fde48fcb02ed14c4772c70f"
+              title="SaaS Dashboard UX Overhaul"
+              description="Redesigned the user experience for a B2B SaaS analytics platform."
+            />
+            <ProjectCard imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/7da38297f922f847b7631e167485534101f582a0?placeholderIfAbsent=true&apiKey=908848c17fde48fcb02ed14c4772c70f" isViewAll={true} />
+          </div>
+        </div>
+      </section>
+
+      <section className="flex overflow-hidden relative flex-col flex-wrap gap-5 items-center self-stretch px-36 py-48 w-full min-h-[782px] max-md:px-5 max-md:py-24 max-md:max-w-full">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/31e3e7ec3d110b473d355a5867003486e9ca87c9?placeholderIfAbsent=true&apiKey=908848c17fde48fcb02ed14c4772c70f"
+          alt=""
+          className="object-cover absolute inset-0 size-full"
+        />
+        <div className="flex relative flex-col self-stretch my-auto min-w-60 w-[650px] max-md:max-w-full">
+          <div className="w-full text-white max-md:max-w-full">
+            <h2 className="text-6xl font-semibold leading-[62px] max-md:max-w-full max-md:text-4xl max-md:leading-[50px]">
+              Launching Soon Our Chrome Extension Beta
+            </h2>
+            <p className="mt-6 text-base leading-7 max-md:max-w-full">
+              Get ready for something powerful. We're building an innovative
+              Chrome extension that transforms how you interact with the web.{" "}
+              <br />
+              Stay tuned — early access opening soon.
+            </p>
+          </div>
+          <Button className="self-start mt-12 max-md:mt-10">
+            Join the Waitlist
+          </Button>
+        </div>
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/e182d5b1f5e9e46542d6f08bb56210dd91440b37?placeholderIfAbsent=true&apiKey=908848c17fde48fcb02ed14c4772c70f"
+          alt=""
+          className="object-contain self-stretch my-auto aspect-[1.56] min-w-60 w-[599px] max-md:max-w-full"
+        />
+      </section>
+
+      <section className="flex flex-wrap gap-10 items-end py-24 max-md:max-w-full">
+        <img
+          src=""
+          alt="Founder"
+          className="object-contain rounded-xl aspect-[0.83] min-w-60 w-[527px] max-md:max-w-full"
+        />
+        <div className="flex flex-col min-w-60 w-[580px] max-md:max-w-full">
+          <div className="w-full text-white max-md:max-w-full">
+            <h2 className="text-6xl font-semibold leading-[62px] max-md:max-w-full max-md:text-4xl max-md:leading-[50px]">
+              Mind Behind Bibotecture
+            </h2>
+            <p className="mt-6 text-lg leading-7 max-md:max-w-full">
+              Hi, I'm [Founder's Name] — a product-first technologist passionate
+              about building accessible and enduring digital experiences. With a
+              decade in the tech industry, I founded Bibotecture to help
+              businesses merge form and function in the digital era.
+            </p>
+          </div>
+          <div className="flex gap-4 items-center self-start mt-8 max-md:max-w-full">
+            <p className="self-stretch my-auto text-lg leading-relaxed text-white">
+              Connect to the founder
+            </p>
+            <div className="shrink-0 self-stretch my-auto w-16 h-px border border-white border-solid" />
+            <SocialLinks />
+          </div>
+        </div>
+      </section>
+
+      <section className="flex relative gap-5 items-start py-24 max-md:max-w-full">
+      <img
+          src="/images/me.jpg"
+          alt="Hero Image"
+          className="object-contain absolute z-0 aspect-[1.37] bottom-[19px] h-[568px] left-[-60px] min-w-60 w-[776px] max-md:max-w-full"
+        />
+        <div className="flex z-0 flex-col min-w-60 w-[618px] max-md:max-w-full">
+          <div className="max-w-full text-white w-[618px]">
+            <h2 className="text-6xl font-semibold leading-[62px] max-md:max-w-full max-md:text-4xl max-md:leading-[50px]">
+              Let's Build the Future Together
+            </h2>
+            <p className="mt-6 text-lg leading-7 max-md:max-w-full">
+              Have an idea, a product, or just want to chat about possibilities?
+              Fill out the form, and we'll get back to you within 24 hours.
+            </p>
+          </div>
+          <div className="flex gap-4 items-center self-start mt-12 max-md:mt-10">
+            <SocialLinks />
+          </div>
+        </div>
+        <ContactForm />
+      </section>
+
+      <Footer />
+    </main>
   );
-}
+};
+
+export default BibotectureLandingPage;
