@@ -2,19 +2,20 @@
 
 import React from "react";
 import { Header } from "./Header";
-import { Hero1 } from "./Hero1";
+import { Hero } from "./Hero";
 import { ServiceCard } from "./ServiceCard";
 import { ProjectCard } from "./ProjectCard";
 import { ContactForm } from "./ContactForm";
 import { Footer } from "./Footer";
 import { Button } from "./Button";
 import { SocialLinks } from "./SocialLinks";
+import { ScrollToTop } from "./ScrollToTop";
 
 export const LandingPage = () => {
   return (
-    <main className="flex overflow-hidden flex-col items-center bg-gray-950 font-['Montserrat']">
+    <main className="flex overflow-hidden flex-col items-center bg-gray-950 font-['Montserrat'] px-5">
       <Header />
-      <Hero1 />
+      <Hero />
 
       <section className="py-24 w-full text-white max-w-[1320px] max-md:max-w-full">
         <header className="pt-4 w-full">
@@ -51,7 +52,7 @@ export const LandingPage = () => {
         </div>
       </section>
 
-      <section className="py-24 w-full max-w-[1321px] max-md:max-w-full">
+      {/* <section className="py-24 w-full max-w-[1321px] max-md:max-w-full">
         <header className="max-w-full text-white w-[873px]">
           <h2 className="text-base leading-tight uppercase max-md:max-w-full">
             Our Work in Action
@@ -98,13 +99,13 @@ export const LandingPage = () => {
             <ProjectCard imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/7da38297f922f847b7631e167485534101f582a0?placeholderIfAbsent=true&apiKey=908848c17fde48fcb02ed14c4772c70f" isViewAll={true} />
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="flex overflow-hidden relative flex-col flex-wrap gap-5 items-center self-stretch px-36 py-48 w-full min-h-[782px] max-md:px-5 max-md:py-24 max-md:max-w-full">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/31e3e7ec3d110b473d355a5867003486e9ca87c9?placeholderIfAbsent=true&apiKey=908848c17fde48fcb02ed14c4772c70f"
+      <img
+          src="/images/chrome-extension.png"
           alt=""
-          className="object-cover absolute inset-0 size-full"
+          className="object-contain self-stretch my-auto aspect-[1.56] min-w-60 w-[599px] max-md:max-w-full"
         />
         <div className="flex relative flex-col self-stretch my-auto min-w-60 w-[650px] max-md:max-w-full">
           <div className="w-full text-white max-md:max-w-full">
@@ -122,16 +123,11 @@ export const LandingPage = () => {
             Join the Waitlist
           </Button>
         </div>
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/e182d5b1f5e9e46542d6f08bb56210dd91440b37?placeholderIfAbsent=true&apiKey=908848c17fde48fcb02ed14c4772c70f"
-          alt=""
-          className="object-contain self-stretch my-auto aspect-[1.56] min-w-60 w-[599px] max-md:max-w-full"
-        />
       </section>
 
-      <section className="flex flex-wrap gap-10 items-end py-24 max-md:max-w-full">
+      <section className="flex flex-wrap gap-10 items-end py-24 px-5 max-md:max-w-full">
         <img
-          src=""
+          src="/images/me.jpg"
           alt="Founder"
           className="object-contain rounded-xl aspect-[0.83] min-w-60 w-[527px] max-md:max-w-full"
         />
@@ -156,13 +152,7 @@ export const LandingPage = () => {
           </div>
         </div>
       </section>
-
-      <section className="flex relative gap-5 items-start py-24 max-md:max-w-full">
-        <img
-          src="/images/me.jpg"
-          alt="Hero Image"
-          className="object-contain absolute z-0 aspect-[1.37] bottom-[19px] h-[568px] left-[-60px] min-w-60 w-[776px] max-md:max-w-full"
-        />
+      <section className="flex relative gap-5 items-start py-24 px-5 max-md:max-w-full">
         <div className="flex z-0 flex-col min-w-60 w-[618px] max-md:max-w-full">
           <div className="max-w-full text-white w-[618px]">
             <h2 className="text-6xl font-semibold leading-[62px] max-md:max-w-full max-md:text-4xl max-md:leading-[50px]">
@@ -177,10 +167,12 @@ export const LandingPage = () => {
             <SocialLinks />
           </div>
         </div>
-        <ContactForm />
       </section>
 
+      <ContactForm />
+
       <Footer />
+      <ScrollToTop />
     </main>
   );
 }; 

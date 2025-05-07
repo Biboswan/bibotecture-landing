@@ -1,16 +1,17 @@
 import React from "react";
+import { FaBlog, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export const SocialLinks: React.FC = () => {
   return (
     <div className="flex gap-8 items-start">
-      <a href="#" className="flex shrink-0 w-6 h-6" aria-label="Instagram">
-        <img src="URL_instagram" alt="Instagram" className="w-full h-full" />
+      <a href="https://biboswanroy.com/work" className="flex shrink-0 w-6 h-6" aria-label="Instagram">
+        <FaBlog/>
       </a>
-      <a href="#" className="flex shrink-0 w-6 h-6" aria-label="LinkedIn">
-        <img src="URL_linkedin" alt="LinkedIn" className="w-full h-full" />
+      <a href="https://www.linkedin.com/in/biboswanroy" className="flex shrink-0 w-6 h-6" aria-label="LinkedIn">
+        <FaLinkedin />
       </a>
-      <a href="#" className="flex shrink-0 w-6 h-6" aria-label="Twitter">
-        <img src="URL_twitter" alt="Twitter" className="w-full h-full" />
+      <a href="https://x.com/Biboswan98" className="flex shrink-0 w-6 h-6" aria-label="Twitter">
+        <FaTwitter />
       </a>
     </div>
   );

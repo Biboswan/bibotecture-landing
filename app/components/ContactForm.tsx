@@ -45,7 +45,7 @@ export const ContactForm: React.FC = () => {
             />
           </div>
         </div>
-        <Button className="w-full mt-8">Send Message</Button>
+        <Button className="w-full mt-8 flex items-center justify-center">Send Message</Button>
       </div>
     </form>
   );

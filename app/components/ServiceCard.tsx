@@ -37,11 +37,13 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
           </Button>
         </div>
       </div>
-      <img
-        src={imageSrc}
+      <div className="flex min-w-60 w-[778px] max-md:max-w-full justify-center">
+        <img
+          src={imageSrc}
         alt=""
-        className="object-contain self-start aspect-square min-w-60 w-[296px]"
-      />
+          className="object-contain self-start aspect-square min-w-60 w-[296px]"
+        />
+      </div>
     </article>
   );
 };
