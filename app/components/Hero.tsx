@@ -1,5 +1,6 @@
 import React from "react";
 import { FaArrowDown } from "react-icons/fa";
+import styles from "./Hero.module.scss";
 
 export const Hero: React.FC = () => {
   return (
@@ -9,17 +10,20 @@ export const Hero: React.FC = () => {
           <div className="grow max-md:mt-10 max-md:max-w-full">
             <div className="flex gap-5 max-md:flex-col">
               <div className="w-[70%] max-md:ml-0 max-md:w-full">
-                <div className="flex relative flex-col pt-28 pb-80 text-8xl font-bold text-white leading-[96px] min-h-[738px] max-md:py-24 max-md:max-w-full max-md:text-4xl max-md:leading-10 bg-gradient-to-b from-[#176FD9] to-[#176FD9]">
-                  <video
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="object-cover absolute inset-0 size-full"
-                    poster="https://cdn.builder.io/api/v1/image/assets/TEMP/3624843a39ddc363bff7a6fd0baff2ef03bc7947?placeholderIfAbsent=true&apiKey=908848c17fde48fcb02ed14c4772c70f"
-                  >
-                    <source src="/videos/wavy.mp4" type="video/mp4" />
-                  </video>
+                <div className="flex relative flex-col pt-28 pb-80 text-8xl font-bold text-white leading-[96px] min-h-[738px] max-md:py-24 max-md:max-w-full max-md:text-4xl max-md:leading-10">
+                 
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="object-cover absolute inset-0 size-full"
+                        poster="https://cdn.builder.io/api/v1/image/assets/TEMP/3624843a39ddc363bff7a6fd0baff2ef03bc7947?placeholderIfAbsent=true&apiKey=908848c17fde48fcb02ed14c4772c70f"
+                      >
+                        <source src="/videos/wavy.mp4" type="video/mp4" />
+                      </video>
+                      <div className={styles["gradient-overlay"]}></div>
+                  
                   <h1 className="relative z-10">
                     Architecting Future—Proof Solutions
                   </h1>

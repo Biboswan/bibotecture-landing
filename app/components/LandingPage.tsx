@@ -4,7 +4,6 @@ import React from "react";
 import { Header } from "./Header";
 import { Hero } from "./Hero";
 import { ServiceCard } from "./ServiceCard";
-import { ProjectCard } from "./ProjectCard";
 import { ContactForm } from "./ContactForm";
 import { Footer } from "./Footer";
 import { Button } from "./Button";
