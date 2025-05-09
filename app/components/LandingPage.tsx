@@ -25,7 +25,7 @@ export const LandingPage = () => {
           <p className="mt-0 text-6xl font-medium leading-[67px] max-md:mt-0 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]">
             We are creatives who focus on creating quality work that offers{" "}
             <strong>powerful solutions</strong>, combining great designs with
-            functionality.
+            functionality. We leverage AI tools systematicaly to reduce development time and cost without sacrificing quality. 
           </p>
         </header>
 
@@ -50,57 +50,7 @@ export const LandingPage = () => {
           />
         </div>
       </section>
-
-      {/* <section className="py-24 w-full max-w-[1321px] max-md:max-w-full">
-        <header className="max-w-full text-white w-[873px]">
-          <h2 className="text-base leading-tight uppercase max-md:max-w-full">
-            Our Work in Action
-          </h2>
-          <p className="mt-6 text-6xl font-medium leading-[67px] max-md:max-w-full max-md:text-4xl max-md:leading-[54px]">
-            We&apos;ve helped startups and enterprises shape meaningful digital
-            journeys.
-          </p>
-        </header>
-
-        <div className="mt-20 w-full max-md:mt-10 max-md:max-w-full">
-          <div className="flex flex-wrap gap-10 justify-between items-center w-full max-md:max-w-full">
-            <div className="flex gap-10 justify-between items-center self-stretch my-auto text-base leading-relaxed text-white min-w-60 w-[316px]">
-              <p className="self-stretch my-auto">Selected Projects</p>
-              <p className="self-stretch my-auto">3 / 9</p>
-            </div>
-            <div className="flex gap-3 items-center self-stretch my-auto">
-              <button
-                className="flex gap-2.5 justify-center items-center self-stretch px-8 py-1 my-auto rounded-3xl bg-gray-950 rotate-[3.141592653589793rad] w-[88px] max-md:px-5"
-                aria-label="Previous"
-              >
-                <span className="flex self-stretch my-auto w-6 min-h-6">←</span>
-              </button>
-              <button
-                className="flex gap-2.5 justify-center items-center self-stretch px-8 py-1 my-auto rounded-3xl bg-gray-950 w-[88px] max-md:px-5"
-                aria-label="Next"
-              >
-                <span className="flex self-stretch my-auto w-6 min-h-6">→</span>
-              </button>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap gap-5 items-start mt-3 w-full text-white max-md:max-w-full">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/26eb33b16d8a98ebc5d0f5c87124189f406a4b27?placeholderIfAbsent=true&apiKey=908848c17fde48fcb02ed14c4772c70f"
-              alt=""
-              className="object-contain shrink-0 rounded-xl aspect-[1.18] min-w-60 w-[315px]"
-            />
-            <ProjectCard
-              imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/bae27cd94d71d6aa54e333df4a1cc66b7e1ac742?placeholderIfAbsent=true&apiKey=908848c17fde48fcb02ed14c4772c70f"
-              title="SaaS Dashboard UX Overhaul"
-              description="Redesigned the user experience for a B2B SaaS analytics platform."
-            />
-            <ProjectCard imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/7da38297f922f847b7631e167485534101f582a0?placeholderIfAbsent=true&apiKey=908848c17fde48fcb02ed14c4772c70f" isViewAll={true} />
-          </div>
-        </div>
-      </section> */}
-
-      <section className="flex overflow-hidden relative flex-col flex-wrap gap-5 items-center self-stretch px-36 py-48 w-full min-h-[782px] max-md:px-5 max-md:py-24 max-md:max-w-full">
+      <section className="flex overflow-hidden relative flex-col flex-wrap gap-5 items-center self-stretch pt-0 pb-48 w-full min-h-[782px] max-md:px-5 max-md:pt-0 max-md:pb-24 max-md:max-w-full">
       <img
           src="/images/chrome-extension.png"
           alt=""
@@ -109,18 +59,43 @@ export const LandingPage = () => {
         <div className="flex relative flex-col self-stretch my-auto min-w-60 w-[650px] max-md:max-w-full">
           <div className="w-full text-white max-md:max-w-full">
             <h2 className="text-6xl font-semibold leading-[62px] max-md:max-w-full max-md:text-4xl max-md:leading-[50px]">
-              Launching Soon Our Chrome Extension Beta
+              A11y Gradient
             </h2>
-            <p className="mt-6 text-base leading-7 max-md:max-w-full">
-              Get ready for something powerful. We&apos;re building an innovative
-              Chrome extension that transforms how you interact with the web.{" "}
-              <br />
-              Stay tuned — early access opening soon.
-            </p>
+            <div className="mt-6 space-y-4 text-base leading-7 max-md:max-w-full">
+              <p className="font-medium">
+                A powerful tool for comprehensive accessibility testing of complex backgrounds.
+              </p>
+              
+              <div className="space-y-3">
+                <p>
+                  While Chrome DevTools only analyzes contrast ratios against solid backgrounds, modern web design often uses:
+                </p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Gradient backgrounds</li>
+                  <li>Image overlays</li>
+                  <li>Multi-colored elements</li>
+                </ul>
+              </div>
+
+              <p>
+                Our extension provides pixel-level contrast analysis, ensuring your text remains accessible regardless of background complexity. It evaluates:
+              </p>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>Text-to-background contrast ratios</li>
+                <li>Text border visibility</li>
+                <li>Element border accessibility</li>
+              </ul>
+            </div>
           </div>
-          <Button className="self-start mt-12 max-md:mt-10">
-            Join the Waitlist
-          </Button>
+          <a 
+            href="https://chromewebstore.google.com/detail/a11y-gradient/kokihagjmdkofdmahbcofpnkccigjmnm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="self-start mt-12 max-md:mt-10">
+              Try out the beta extension
+            </Button>
+          </a>
         </div>
       </section>
 
@@ -135,12 +110,25 @@ export const LandingPage = () => {
             <h2 className="text-6xl font-semibold leading-[62px] max-md:max-w-full max-md:text-4xl max-md:leading-[50px]">
               Mind Behind Bibotecture
             </h2>
-            <p className="mt-6 text-lg leading-7 max-md:max-w-full">
-              Hi, I&apos;m [Founder&apos;s Name] — a product-first technologist passionate
-              about building accessible and enduring digital experiences. With a
-              decade in the tech industry, I founded Bibotecture to help
-              businesses merge form and function in the digital era.
-            </p>
+            <div className="mt-6 space-y-6 text-lg leading-7 max-md:max-w-full">
+              <p>
+                Hi, I&apos;m Biboswan Roy — a product-first technologist passionate
+                about building accessible and enduring digital experiences.
+              </p>
+
+              <p>
+                I have led impactful projects at:
+              </p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>SentinelOne Inc - Led development of Unified Tagging Platform across 16 product lines</li>
+                <li>Mozilla - Contributed to Firefox and Taskcluster CI framework</li>
+                <li>Feats Aps - Verfifiable network based out of project history</li>
+              </ul>
+
+              <p>
+                I specialize in building complex frontend architectures powering enterprise security solutions with React, NextJS, GraphQL, and TypeScript. With proven expertise in leading distributed teams and delivering high-impact features, I excel at collaborating asynchronously across time zones.
+              </p>
+            </div>
           </div>
           <div className="flex gap-4 items-center self-start mt-8 max-md:max-w-full">
             <p className="self-stretch my-auto text-lg leading-relaxed text-white">
@@ -169,7 +157,6 @@ export const LandingPage = () => {
       </section>
 
       <ContactForm />
-
       <Footer />
       <ScrollToTop />
     </main>
