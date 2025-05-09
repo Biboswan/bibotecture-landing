@@ -22,7 +22,7 @@ export const LandingPage = () => {
             <div className="w-full border border-white border-solid min-h-px max-md:max-w-full" />
             <h2 className="mt-1 max-md:max-w-full">What We Do</h2>
           </div>
-          <p className="mt-0 text-6xl font-medium leading-[67px] max-md:mt-0 max-md:max-w-full max-md:text-4xl max-md:leading-[54px]">
+          <p className="mt-0 text-56 font-medium leading-[67px] max-md:mt-0 max-md:max-w-full max-md:text-2xl max-md:leading-[54px] text-[20px] lg:text-[56px]">
             We are creatives who focus on creating quality work that offers{" "}
             <strong>powerful solutions</strong>, combining great designs with
             functionality. We leverage AI tools systematicaly to reduce development time and cost without sacrificing quality. 
