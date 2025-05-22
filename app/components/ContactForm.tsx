@@ -86,7 +86,7 @@ export const ContactForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="text-base min-w-60 w-[650px] max-md:max-w-full">
+    <form onSubmit={handleSubmit}>
       <div className="w-full max-md:max-w-full">
         <div className="w-full leading-relaxed text-white max-md:max-w-full">
           <div className="flex flex-wrap gap-4 items-center w-full max-md:max-w-full">

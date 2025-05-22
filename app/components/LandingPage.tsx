@@ -50,13 +50,8 @@ export const LandingPage = () => {
           />
         </div>
       </section>
-      <section className="flex overflow-hidden relative flex-col flex-wrap gap-5 items-center self-stretch pt-0 pb-48 w-full min-h-[782px] max-md:px-5 max-md:pt-0 max-md:pb-24 max-md:max-w-full">
-      <img
-          src="/images/chrome-extension.png"
-          alt=""
-          className="object-contain self-stretch my-auto aspect-[1.56] min-w-60 w-[599px] max-md:max-w-full"
-        />
-        <div className="flex relative flex-col self-stretch my-auto min-w-60 w-[650px] max-md:max-w-full">
+      <section className="flex overflow-hidden relative flex-col lg:flex-row gap-5 items-center self-stretch pt-0 pb-48 w-full min-h-[782px] px-5 lg:px-[100px] max-md:pt-0 max-md:pb-24 max-md:max-w-full">
+        <div className="flex relative flex-col self-stretch my-auto min-w-60 w-[650px] max-md:max-w-full order-2 lg:order-1">
           <div className="w-full text-white max-md:max-w-full">
             <h2 className="text-6xl font-semibold leading-[62px] max-md:max-w-full max-md:text-4xl max-md:leading-[50px]">
               A11y Gradient
@@ -97,6 +92,11 @@ export const LandingPage = () => {
             </Button>
           </a>
         </div>
+        <img
+          src="/images/chrome-extension.png"
+          alt="Chrome Extension Interface"
+          className="object-contain self-stretch my-auto aspect-[1.56] min-w-60 w-[599px] max-md:max-w-full order-1 lg:order-2"
+        />
       </section>
 
       <section className="flex flex-wrap gap-10 items-end py-24 px-5 max-md:max-w-full">
@@ -156,7 +156,9 @@ export const LandingPage = () => {
         </div>
       </section>
 
-      <ContactForm />
+      <section id="contact" className="text-base min-w-60 w-[650px] max-md:max-w-full">
+        <ContactForm />
+        </section>
       <Footer />
       <ScrollToTop />
     </main>
