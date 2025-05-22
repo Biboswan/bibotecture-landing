@@ -13,11 +13,17 @@ import { ScrollToTop } from "./ScrollToTop";
 export const LandingPage = () => {
   return (
     <main className="flex overflow-hidden flex-col items-center bg-gray-950 font-['Montserrat'] px-5">
-      <Header />
-      <Hero />
+      <div className="relative w-full">
+        <div 
+          className="absolute w-[525px] h-[525px] -left-[253.08px] top-[6.42px] bg-gradient-to-br from-[#00CAFE] from-[26.42%] to-[#A075FF] to-[72.51%] blur-[250px] -rotate-30"
+          aria-hidden="true"
+        />
+        <Header />
+        <Hero />
+      </div>
 
       <section className="py-24 w-full text-white max-w-[1320px] max-md:max-w-full">
-        <header className="pt-4 w-full">
+        <div className="pt-4 w-full">
           <div className="z-10 max-w-full text-base leading-tight uppercase w-[538px]">
             <div className="w-full border border-white border-solid min-h-px max-md:max-w-full" />
             <h2 className="mt-1 max-md:max-w-full">What We Do</h2>
@@ -27,7 +33,7 @@ export const LandingPage = () => {
             <strong>powerful solutions</strong>, combining great designs with
             functionality. We leverage AI tools systematicaly to reduce development time and cost without sacrificing quality. 
           </p>
-        </header>
+        </div>
 
         <div className="mt-20 w-full max-md:mt-10 max-md:max-w-full">
           <ServiceCard
