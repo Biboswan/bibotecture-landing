@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   variant?: "primary" | "outline";
   className?: string;
@@ -13,6 +13,7 @@ export const Button: React.FC<ButtonProps> = ({
   variant = "primary",
   className = "",
   onClick,
+  ...rest
 }) => {
   const baseStyles =
     "flex items-center gap-2 px-8 py-3.5 font-medium uppercase rounded-md cursor-pointer";
@@ -26,6 +27,7 @@ export const Button: React.FC<ButtonProps> = ({
     <button
       onClick={onClick}
       className={`${baseStyles} ${variants[variant]} ${className}`}
+      {...rest}
     >
       {children}
     </button>
