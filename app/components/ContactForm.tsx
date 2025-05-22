@@ -78,7 +78,7 @@ export const ContactForm: React.FC = () => {
         company: "",
         message: "",
       });
-    } catch (err) {
+    } catch {
       setError("Failed to send message. Please try again later.");
     } finally {
       setIsSubmitting(false);
@@ -140,7 +140,7 @@ export const ContactForm: React.FC = () => {
         )}
         {success && (
           <div className="mt-4 text-green-500 text-sm">
-            Message sent successfully! We'll get back to you soon.
+            Message sent successfully! We&apos;ll get back to you soon.
           </div>
         )}
         <Button 
