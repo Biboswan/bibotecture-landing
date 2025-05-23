@@ -12,8 +12,9 @@ import { ScrollToTop } from "./ScrollToTop";
 
 export const LandingPage = () => {
   return (
-    <main className="flex overflow-hidden flex-col items-center bg-gray-950 font-['Montserrat'] px-5">
-      <div className="relative w-full">
+    <>
+    <main className="flex overflow-hidden flex-col items-center bg-gray-950 font-['Montserrat']">
+      <div className="px-5 relative w-full">
         <div 
           className="absolute w-[525px] h-[525px] -left-[253.08px] top-[6.42px] bg-gradient-to-br from-[#00CAFE] from-[26.42%] to-[#A075FF] to-[72.51%] blur-[250px] -rotate-30"
           aria-hidden="true"
@@ -22,8 +23,8 @@ export const LandingPage = () => {
         <Hero />
       </div>
 
-      <section className="py-24 w-full text-white max-w-[1320px] max-md:max-w-full">
-        <div className="pt-4 w-full">
+      <section className="py-24 w-full text-white max-w-[1320px] max-md:max-w-full relative">
+        <div className=" px-5 pt-4 w-full">
           <div className="z-10 max-w-full text-base leading-tight uppercase w-[538px]">
             <div className="w-full border border-white border-solid min-h-px max-md:max-w-full" />
             <h2 className="mt-1 max-md:max-w-full">What We Do</h2>
@@ -35,7 +36,22 @@ export const LandingPage = () => {
           </p>
         </div>
 
-        <div className="mt-20 w-full max-md:mt-10 max-md:max-w-full">
+        {/* Ellipse 2 Gradient */}
+        <div
+          className="pointer-events-none absolute z-0"
+          style={{
+            width: "30%",
+            height: "444.58px",
+            right:0,
+            top: "40%",
+            background: "linear-gradient(176.39deg, #00CAFE 2.35%, #A075FF 92.94%)",
+            filter: "blur(250px)",
+            borderRadius: "50%",
+          }}
+          aria-hidden="true"
+        />
+
+        <div className="mt-20 w-full max-md:mt-10 max-md:max-w-full flex flex-col gap-10">
           <ServiceCard
             number="001"
             title="UI/UX Development Services"
@@ -56,7 +72,7 @@ export const LandingPage = () => {
           />
         </div>
       </section>
-      <section className="flex overflow-hidden relative flex-col lg:flex-row gap-5 items-center self-stretch pt-0 pb-48 w-full min-h-[782px] px-5 lg:px-[100px] max-md:pt-0 max-md:pb-24 max-md:max-w-full">
+      <section className="px-5 flex overflow-hidden relative flex-col lg:flex-row gap-5 items-center self-stretch pt-0 pb-48 w-full min-h-[782px] px-5 lg:px-[100px] max-md:pt-0 max-md:pb-24 max-md:max-w-full">
         <div className="flex relative flex-col self-stretch my-auto min-w-60 w-[650px] max-md:max-w-full order-2 lg:order-1">
           <div className="w-full text-white max-md:max-w-full">
             <h2 className="text-6xl font-semibold leading-[62px] max-md:max-w-full max-md:text-4xl max-md:leading-[50px]">
@@ -105,7 +121,7 @@ export const LandingPage = () => {
         />
       </section>
 
-      <section className="flex flex-wrap gap-10 items-end py-24 px-5 max-md:max-w-full">
+      <section className="flex flex-wrap gap-10 items-end py-24 px-10 max-md:max-w-full">
         <img
           src="/images/me.jpg"
           alt="Founder"
@@ -145,7 +161,7 @@ export const LandingPage = () => {
           </div>
         </div>
       </section>
-      <section className="flex relative gap-5 items-start py-24 px-5 max-md:max-w-full">
+      <section className="flex relative gap-5 items-start py-24 px-10 max-md:max-w-full">
         <div className="flex z-0 flex-col min-w-60 w-[618px] max-md:max-w-full">
           <div className="max-w-full text-white w-[618px]">
             <h2 className="text-6xl font-semibold leading-[62px] max-md:max-w-full max-md:text-4xl max-md:leading-[50px]">
@@ -162,11 +178,12 @@ export const LandingPage = () => {
         </div>
       </section>
 
-      <section id="contact" className="text-base min-w-60 w-[650px] max-md:max-w-full">
+      <section id="contact" className="px-10 text-base min-w-60 w-[650px] max-md:max-w-full">
         <ContactForm />
         </section>
-      <Footer />
       <ScrollToTop />
     </main>
+    <Footer />
+    </>
   );
 }; 
