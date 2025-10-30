@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
           <Logo className="object-contain max-w-full aspect-[3.82] w-[214px]" />
           <address className="mt-6 w-full not-italic">
             <a href="mailto:bibotecture@gmail.com">bibo@biboswanroy.com</a>
-            <a href="tel:+971551755470" className="block mt-3">
+            <a href="tel:+447537169515" className="block mt-3">
               +447537169515
             </a>
             <p className="mt-3">
