@@ -146,7 +146,7 @@ export const WaitlistModal: React.FC<WaitlistModalProps> = ({
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                You're in! 🎉
+                You&apos;re in! 🎉
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
                 {type === "early-access"

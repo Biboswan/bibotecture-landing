@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { Button } from "../../components/Button";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { WaitlistModal } from "./WaitlistModal";
@@ -44,9 +45,11 @@ export const HeroSection: React.FC = () => {
             <div className="relative w-full max-w-5xl mx-auto">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-purple-500/20 to-pink-500/20 blur-3xl rounded-2xl -z-10" />
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200/50 dark:border-gray-700/50 bg-white/5 dark:bg-gray-900/5 backdrop-blur-sm">
-                <img
+                <Image
                   src="/images/chatcoach.png"
                   alt="Chat Coach interface showing real-time communication guidance integrated into messaging apps"
+                  width={1920}
+                  height={1080}
                   className="w-full h-auto object-contain"
                 />
               </div>
