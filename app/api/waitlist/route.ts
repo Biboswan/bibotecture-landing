@@ -1,12 +1,21 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import {
+  type WaitlistRequest,
+  validateEmail,
+  validateEmailCredentials,
+  getSignupType,
+  createEmailTransporter,
+  verifyTransporter,
+  sendWaitlistEmails,
+} from "@/app/lib/email";
 
+// Main Handler
 export async function POST(request: Request) {
   try {
-    const { email, name, type } = await request.json();
+    const { email, name, type }: WaitlistRequest = await request.json();
 
-    // Validate email
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    // Validate input
+    if (!validateEmail(email)) {
       return NextResponse.json(
         { message: "Valid email is required" },
         { status: 400 }
@@ -14,7 +23,7 @@ export async function POST(request: Request) {
     }
 
     // Validate environment variables
-    if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
+    if (!validateEmailCredentials()) {
       console.error("Missing email credentials in environment variables");
       return NextResponse.json(
         { message: "Email service configuration error" },
@@ -22,51 +31,13 @@ export async function POST(request: Request) {
       );
     }
 
-    // Create a transporter using Gmail SMTP
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
-      },
-    });
+    // Setup email transporter
+    const transporter = createEmailTransporter();
+    await verifyTransporter(transporter);
 
-    // Verify transporter configuration
-    try {
-      await transporter.verify();
-      console.log("SMTP connection verified successfully");
-    } catch (verifyError) {
-      console.error("SMTP verification failed:", verifyError);
-      return NextResponse.json(
-        { message: "Email service configuration error" },
-        { status: 500 }
-      );
-    }
-
-    // Email content
-    const signupType = type === "early-access" ? "Early Access" : "Waitlist";
-    const mailOptions = {
-      from: process.env.GMAIL_USER,
-      to: process.env.WAITLIST_EMAIL || process.env.CONTACT_EMAIL,
-      subject: `New ${signupType} Signup - Chat Coach`,
-      text: `
-New ${signupType} Signup for Chat Coach
-
-Email: ${email}
-Name: ${name || "Not provided"}
-Type: ${signupType}
-      `,
-      html: `
-<h2>New ${signupType} Signup for Chat Coach</h2>
-<p><strong>Email:</strong> ${email}</p>
-<p><strong>Name:</strong> ${name || "Not provided"}</p>
-<p><strong>Type:</strong> ${signupType}</p>
-      `,
-    };
-
-    // Send email
-    await transporter.sendMail(mailOptions);
-    console.log("Waitlist signup email sent successfully");
+    // Prepare and send emails
+    const signupType = getSignupType(type);
+    await sendWaitlistEmails(transporter, email, name, signupType);
 
     return NextResponse.json(
       { message: "Successfully added to waitlist" },
