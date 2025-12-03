@@ -143,7 +143,7 @@ export const PrivacySection: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-2xl font-semibold mb-3 text-gray-900 dark:text-white">
-                  You're in Control
+                  You&apos;re in Control
                 </h3>
                 <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                   You can clear your chat history at any time directly from your device. 
