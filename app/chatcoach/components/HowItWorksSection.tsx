@@ -7,9 +7,10 @@ interface StepProps {
   number: string;
   title: string;
   description: string;
+  bullets?: string[];
 }
 
-const Step: React.FC<StepProps> = ({ number, title, description }) => {
+const Step: React.FC<StepProps> = ({ number, title, description, bullets }) => {
   return (
     <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
       <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-cyan-400 to-purple-500 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
@@ -22,6 +23,13 @@ const Step: React.FC<StepProps> = ({ number, title, description }) => {
         <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
           {description}
         </p>
+        {bullets?.length ? (
+          <ul className="mt-4 space-y-2 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            {bullets.map((bullet) => (
+              <li key={bullet}>{bullet}</li>
+            ))}
+          </ul>
+        ) : null}
       </div>
     </div>
   );
@@ -40,6 +48,9 @@ export const HowItWorksSection: React.FC = () => {
       number: "2",
       title: "Get real-time communication insights",
       description: "Chat Coach analyzes tone, emotional cues, and conversation patterns as you chat, providing instant guidance when you need it.",
+      bullets: [
+        "✓ Private model processing — no ChatGPT data sharing, full coach oversight",
+      ],
     },
     {
       number: "3",

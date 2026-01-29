@@ -39,21 +39,21 @@ export const HeroSection: React.FC = () => {
           className="absolute inset-0 -z-10 bg-gradient-to-br from-cyan-400/20 via-purple-500/20 to-pink-500/20 blur-3xl rounded-full"
           aria-hidden="true"
         />
-        
+
         <div className="relative z-10 text-center space-y-8">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight tracking-tight">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Real-Time EQ-Powered Communication Coaching
+            Learn Communication
             </span>
             <br />
             <span className="text-gray-900 dark:text-white">
-            from Digital Twins of Your Favorite Experts
+            from Digital Twins of Your Favorite Coaches
             </span>
           </h1>
           
           <p className="text-xl sm:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
           Improve your conversations instantly with real-time, EQ-driven coaching — and soon,
-          choose Digital Twins modeled on negotiation experts, dating coaches, therapists, founders, and more
+          choose Digital Twins modeled on negotiation experts, dating coaches, therapists, founders, and more. Powered by private models — your client data never leaves our secure ecosystem.
           </p>
           
           {/* Product Screenshot Carousel */}

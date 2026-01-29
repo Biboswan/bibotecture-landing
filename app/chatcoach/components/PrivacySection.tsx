@@ -65,14 +65,48 @@ export const PrivacySection: React.FC = () => {
                   />
                 </svg>
               </div>
-              <div>
-                <h3 className="text-2xl font-semibold mb-3 text-gray-900 dark:text-white">
-                  Stays on Your Device
+              <div className="w-full">
+                <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
+                  Privacy-First Private Model
                 </h3>
-                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Your chat history is stored only on your device. It never leaves your computer 
-                  or phone and is never uploaded to our servers.
-                </p>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                  <div className="flex flex-col items-center text-center p-4 rounded-xl bg-gray-50 dark:bg-gray-700/40">
+                    <svg className="w-7 h-7 text-cyan-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                    </svg>
+                    <span className="font-semibold text-sm text-gray-900 dark:text-white">Self-Hosted AI</span>
+                    <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">No external providers</span>
+                  </div>
+                  <div className="flex flex-col items-center text-center p-4 rounded-xl bg-gray-50 dark:bg-gray-700/40">
+                    <svg className="w-7 h-7 text-cyan-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                    <span className="font-semibold text-sm text-gray-900 dark:text-white">E2E Encrypted</span>
+                    <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">Fully protected data</span>
+                  </div>
+                  <div className="flex flex-col items-center text-center p-4 rounded-xl bg-gray-50 dark:bg-gray-700/40">
+                    <svg className="w-7 h-7 text-cyan-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    <span className="font-semibold text-sm text-gray-900 dark:text-white">GDPR Compliant</span>
+                    <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">Audit-ready security</span>
+                  </div>
+                  <div className="flex flex-col items-center text-center p-4 rounded-xl bg-gray-50 dark:bg-gray-700/40">
+                    <svg className="w-7 h-7 text-cyan-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span className="font-semibold text-sm text-gray-900 dark:text-white">Coach Dashboard</span>
+                    <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">You control training</span>
+                  </div>
+                  <div className="flex flex-col items-center text-center p-4 rounded-xl bg-gray-50 dark:bg-gray-700/40">
+                    <svg className="w-7 h-7 text-cyan-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                    </svg>
+                    <span className="font-semibold text-sm text-gray-900 dark:text-white">Delete Anytime</span>
+                    <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">Full data ownership</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
