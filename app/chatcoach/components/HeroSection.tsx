@@ -43,11 +43,11 @@ export const HeroSection: React.FC = () => {
         <div className="relative z-10 text-center space-y-8">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight tracking-tight">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Learn Communication
+            Ace Conversations
             </span>
             <br />
             <span className="text-gray-900 dark:text-white">
-            from Digital Twins of Your Favorite Coaches
+            with help from Digital Twins of Experts
             </span>
           </h1>
           
